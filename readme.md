@@ -13,7 +13,7 @@ Next.js + shadcn/ui starter with built-in dark mode support.
 ## Quick Start
 
 ```bash
-npx create-next-shadcn my-app
+npx create-nextjs-shadcn my-app
 cd my-app
 npm install
 npm run dev
