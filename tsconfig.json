@@ -9,7 +9,7 @@
     "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "types": ["node"]
+    "types": []
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "template"]
