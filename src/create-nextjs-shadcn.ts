@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
+
+import fs from 'node:fs/promises';  // Use node: prefix
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import chalk from 'chalk';
 import ora from 'ora';
 import inquirer from 'inquirer';
