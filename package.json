@@ -12,12 +12,12 @@
   "scripts": {
     "prepare": "npm run build && husky install",
     "prepublishOnly": "npm test",
-    "build": "tsc || echo 'Skipping build (no TypeScript)'",
-    "dev": "npm install && npm link && node bin/create-next-shadcn.js test-app --local",
+    "build": "tsc && node -e \"try{require('fs').chmodSync('bin/create-next-shadcn.js',0o755);}catch(e){}\"",
+    "dev": "npm run build && npm link && create-next-shadcn test-app --local",
     "test": "npm run lint && npm run test:create",
     "test:create": "node bin/create-next-shadcn.js test-app --ci",
-    "lint": "eslint bin/",
-    "format": "prettier --write bin/",
+    "lint": "eslint src/",
+    "format": "prettier --write src/",
     "release": "standard-version"
   },
   "dependencies": {
