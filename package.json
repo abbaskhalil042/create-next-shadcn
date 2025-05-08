@@ -1,0 +1,54 @@
+{
+  "name": "create-next-shadcn",
+  "version": "1.0.1",
+  "type": "module",
+  "bin": {
+    "create-next-shadcn": "./bin/create-next-shadcn.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "scripts": {
+    "prepare": "npm run build && husky install",
+    "prepublishOnly": "npm test",
+    "build": "tsc || echo 'Skipping build (no TypeScript)'",
+    "dev": "npm install && npm link && node bin/create-next-shadcn.js test-app --local",
+    "test": "npm run lint && npm run test:create",
+    "test:create": "node bin/create-next-shadcn.js test-app --ci",
+    "lint": "eslint bin/",
+    "format": "prettier --write bin/",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^9.3.7",
+    "ora": "^6.3.1"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/inquirer": "^9.0.4",
+    "@types/node": "^20",
+    "@types/ora": "^3.1.0",
+    "eslint": "^9",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3",
+    "standard-version": "^9.5.0",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbaskhalil042/create-next-shadcn.git"
+  },
+  "keywords": [
+    "nextjs",
+    "shadcn",
+    "starter-kit",
+    "cli"
+  ]
+}
