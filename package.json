@@ -10,8 +10,9 @@
     "template"
   ],
   "scripts": {
-    "prepare": "npm run build && husky install",
-    "build": "tsc && chmod +x bin/create-nextjs-shadcn.js",
+    "build": "tsc",
+    "postbuild": "node scripts/set-permissions.js",
+    "prepare": "npm run build && (if exist .git husky install || true)",
     "dev": "npm run build && npm link && create-nextjs-shadcn test-app --local",
     "test": "npm run test:create",
     "prepublishOnly": "npm run build",

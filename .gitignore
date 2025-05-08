@@ -1,5 +1,33 @@
-node_modules
+# Dependencies
+node_modules/
 package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build outputs
+bin/
+dist/
+out/
+.next/
+
+# Test/temp directories
+test-app/
+.temp/
+coverage/
+
+# Environment files
+.env*
+!.env.example
+
+# System files
 .DS_Store
-test-app
-.husky/
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
