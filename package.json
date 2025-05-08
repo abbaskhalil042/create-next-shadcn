@@ -1,6 +1,6 @@
 {
   "name": "create-nextjs-shadcn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "bin": {
     "create-next-shadcn": "./bin/create-nextjs-shadcn.js"
